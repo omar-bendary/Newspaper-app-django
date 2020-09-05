@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load bootstrap4 %}
+
+{% block title %}
+New Artile
+{% endblock title %}
+
+{% block content %}
+
+<h2>New Article</h2>
+<div class="col-lg-4">
+    <form method="post" class="form">
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        {% buttons %}
+        <button type="submit" class="btn btn-primary">Create</button>
+        {% endbuttons %}
+    </form>
+</div>
+
+{% endblock content %}
